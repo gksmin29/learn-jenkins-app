@@ -57,6 +57,18 @@ pipeline {
                 '''
             }
         }
+
+        stage('Prod E2E')  {
+            environment {
+                CI_ENVIRONMENT_URL = https://bejewelled-sunburst-0bb57d.netlify.app
+            }
+            steps {
+                sh '''
+                    npx playwright test --reporter=html
+
+                '''
+            }
+        }
     }
     post {
         always {
