@@ -6,7 +6,7 @@ pipeline {
             AWS_DEFAULT_REGION = 'ap-northeast-2'
             AWS_ECS_CLUSTER = 'punctual-ostrich-ygkkvh'
             AWS_ECS_SERVICE_PROD = 'LearnJenkinsApp-Service-Prod'
-            AWS_ECS_TD_PROD = 'LearnJenkinsApp-TaskDefinition-Prod:4'
+            AWS_ECS_TD_PROD = 'LearnJenkinsApp-TaskDefinition-Prod'
         }
 
     stages {
