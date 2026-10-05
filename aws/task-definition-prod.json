@@ -2,11 +2,11 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "family": "LearnJenkinsApp-TaskDefinition-Prod3",
+    "family": "LearnJenkinsApp-TaskDefinition-Prod",
     "containerDefinitions": [
         {
             "name": "learnjenkinsapp",
-            "image": "614388036068.dkr.ecr.ap-northeast-2.amazonaws.com/myjenkinsapp:#APP_VERSION#",
+            "image": "nginx:1.27-alpine",
             "portMappings": [{
                 "name": "nginx-80-tip",
                 "containerPort": 80,
@@ -22,5 +22,5 @@
     "networkMode": "awsvpc",
     "memory": "512",
     "cpu": "256",
-    "executionRoleArn": "arn:aws:iam::614388036068:role/ecsTaskExecutionRole"
+    "executionRoleArn": ""
 }
